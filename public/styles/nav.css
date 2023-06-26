@@ -1,0 +1,31 @@
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1; 
+}
+
+.nav-name {
+  position: absolute;
+  top: 55px; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  color: #FFFFFF; 
+  margin-left: 1.5em;
+  font-size: 35px;
+}
+
+.nav-text {
+  position: absolute;
+  top: 40px; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  color: #FFFFFF;
+  font-family: 'Source Sans 3';
+  margin-right: 1.5em;
+  text-align: right;
+}
+
+i {
+  position:absolute;
+  top: 65px; bottom: 0; right: 0;
+  margin-right: 105px;
+}
