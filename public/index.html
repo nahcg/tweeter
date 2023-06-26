@@ -3,27 +3,64 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />      
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="nav-name">tweeter</span>
+      <div class="nav-text"><strong>Write</strong> a new tweet</div>
+      <span class="arrow" style="font-size: 1.5em; color: Tomato;">
+        <i class="fa-solid fa-angles-down fa-pull-right fa-bounce" style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 0.75; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 1;"></i>
+      </span>
     </nav>
+    <header>
+      <div class="headerimg">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div class="name">
+          <h2>Your Name</h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <p>ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem</p>
+      <section class="newtweet">
+        <form method="POST" action="/tweets">
+          <label for="tweet-text" class="tweettext">What are you humming about?</label>
+          <br>
+          <textarea name="text" class="tweetarea" id="tweetarea"></textarea>
+          <hr>
+          <div class="button">
+            <button type="submit" class="tweetbutton">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id="output">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
