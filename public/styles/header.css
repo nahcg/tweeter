@@ -1,0 +1,18 @@
+header {
+  height: 520px;
+  background-color: #FFE333;
+  background-image: url(http://www.transparenttextures.com/patterns/batthern.png);
+}
+
+.headerimg {
+  padding-top: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
