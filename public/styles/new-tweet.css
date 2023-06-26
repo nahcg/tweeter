@@ -1,0 +1,41 @@
+.tweettext {
+  font-family: "Source Sans 3";
+  text-align: left;
+  font-weight: bold;
+}
+
+.tweetarea {
+  text-align: center;
+}
+
+hr {
+  text-align: center;
+}
+
+.tweetbutton {
+  float: left;
+}
+
+.counter {
+  float: right;
+}
+
+.counter.red {
+  float: right;
+  color: red;
+}
+
+/* <main class="container">
+<section class="new-tweet">
+  <form method="POST" action="/tweets">
+    <label for="tweet-text" class="tweettext">What are you humming about?</label>
+    <br>
+    <textarea name="text" class="tweetarea"></textarea>
+    <hr>
+    <div>
+      <button type="submit" class="tweetbutton">Tweet</button>
+      <output name="counter" class="counter" for="tweet-text">140</output>
+    </div>
+  </form>
+</section>
+</main> */
