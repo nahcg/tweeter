@@ -1,3 +1,8 @@
+.newtweet {
+  margin-top: 100px;
+  margin-bottom: 100px
+}
+
 .tweettext {
   font-family: "Source Sans 3";
   text-align: left;
@@ -6,10 +11,11 @@
 
 .tweetarea {
   text-align: center;
+  width: 100%;
 }
 
 hr {
-  text-align: center;
+  border: 2px solid black;
 }
 
 .tweetbutton {
@@ -25,17 +31,58 @@ hr {
   color: red;
 }
 
-/* <main class="container">
-<section class="new-tweet">
-  <form method="POST" action="/tweets">
-    <label for="tweet-text" class="tweettext">What are you humming about?</label>
-    <br>
-    <textarea name="text" class="tweetarea"></textarea>
-    <hr>
-    <div>
-      <button type="submit" class="tweetbutton">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text">140</output>
-    </div>
-  </form>
-</section>
-</main> */
+.tweetcontainer {
+  border-width: 5px;
+  border-style: solid;
+  font-family: 'Source Sans 3';
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.tweetcontainer:hover {
+  box-shadow: 10px 10px 5px lightblue;
+}
+
+.tweets {
+  padding: 10px;
+}
+
+.tweet {
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.fa-face-smile {
+  vertical-align: middle;
+}
+
+.username {
+  float: right;
+  color: rgb(75, 173, 205);
+}
+
+.username:hover {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 15px;
+}
+
+.icons {
+  float: right;
+  color: #4056A1;
+}
+
+.fa-flag:hover {
+  color: #FFE333;
+}
+
+.fa-retweet:hover {
+  color: #FFE333;
+}
+
+.fa-heart:hover {
+  color: #FFE333;
+}
