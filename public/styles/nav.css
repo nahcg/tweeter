@@ -24,8 +24,8 @@ nav {
   text-align: right;
 }
 
-i {
-  position:absolute;
+.arrow {
+  position: absolute;
   top: 65px; bottom: 0; right: 0;
   margin-right: 105px;
 }
