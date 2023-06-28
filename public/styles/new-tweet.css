@@ -44,7 +44,7 @@ hr {
 }
 
 .tweets {
-  padding: 10px;
+  padding: 30px;
 }
 
 .tweet {
@@ -53,7 +53,7 @@ hr {
   padding-right: 5px;
 }
 
-.fa-face-smile {
+img {
   vertical-align: middle;
 }
 
