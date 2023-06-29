@@ -67,4 +67,25 @@ const renderTweets = function(tweets) {
 
 renderTweets(data);
 
+//loadTweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON
+function loadTweets() {
+  $.ajax({
+    url : '/tweets',
+    type: 'GET',
+    success : renderTweets
+  })
+};
+
+loadTweets();
+
+
+});
+
+//Add an event listener for submit and prevent its default behaviour
+$("#tweetform").on("submit", function(event) {
+  alert("Handler for `submit` called.");
+  event.preventDefault();
+  const input = $('textarea').serialize();
+  console.log(input);
+  $.post("/tweets/", input);
 });
