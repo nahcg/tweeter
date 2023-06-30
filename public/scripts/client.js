@@ -43,7 +43,7 @@ const createTweetElement = function(data) {
     <footer>
       <p  class="tweet">${data.content.text}</p>
       <hr>
-      <span class="date">10 days ago</span>
+      <span class="date">${timeago.format(data.created_at)}</span>
       <span class="icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -79,13 +79,18 @@ function loadTweets() {
 loadTweets();
 
 
-});
-
 //Add an event listener for submit and prevent its default behaviour
 $("#tweetform").on("submit", function(event) {
-  alert("Handler for `submit` called.");
   event.preventDefault();
   const input = $('textarea').serialize();
-  console.log(input);
-  $.post("/tweets/", input);
+  if (!$('textarea').val()) {
+    alert('no input');
+  } else if (input.length > 140) {
+    alert('length too long')
+  } else {
+    $.post("/tweets/", input);
+  }
+
+});
+
 });
