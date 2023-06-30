@@ -76,7 +76,6 @@ function loadTweets() {
   })
 };
 
-loadTweets();
 
 
 //Add an event listener for submit and prevent its default behaviour
@@ -89,8 +88,8 @@ $("#tweetform").on("submit", function(event) {
     alert('length too long')
   } else {
     $.post("/tweets/", input);
+    loadTweets();
   }
-
 });
 
 });
