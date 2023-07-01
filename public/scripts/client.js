@@ -5,8 +5,14 @@
  */
 $( document ).ready(function() {
   
-  const data = [];
+const data = [];
 
+//Preventing XSS with escape function
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function(data) {
   var $tweet =
@@ -19,7 +25,7 @@ const createTweetElement = function(data) {
       </span>
     </header>
     <footer>
-      <p  class="tweet">${data.content.text}</p>
+      <p  class="tweet">${escape(data.content.text)}</p>
       <hr>
       <span class="date">${timeago.format(data.created_at)}</span>
       <span class="icons">
