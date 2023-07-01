@@ -84,6 +84,10 @@ $("#tweetform").on("submit", function(event) {
     $("#errorlength").slideUp();
     $.post("/tweets/", input, () => {
     loadTweets();
+    // clear textarea after tweet is submitted
+    $('textarea').val('');
+    // reset counter after tweet is submitted
+    $('.counter').text('140');
     });
   }
 });
