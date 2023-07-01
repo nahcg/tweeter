@@ -45,26 +45,25 @@ const createTweetElement = function(data) {
 
 
 const renderTweets = function(tweets) {
-// loops through tweets
+  //empty container before loading new tweets
+  $(".tweetcontainer").empty();
+  // loops through tweets
   for (const t of tweets) {
   // calls createTweetElement for each tweet
-    let $tw = createTweetElement(t);
+    const $tw = createTweetElement(t);
     // takes return value and appends it to the tweets container
-    $('.tweetcontainer').append($tw);
+    $('.tweetcontainer').prepend($tw);
   }
 };
 
-renderTweets(data);
 
 //loadTweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON
 function loadTweets() {
-  $.ajax({
-    url : '/tweets',
-    type: 'GET',
-    success : renderTweets
-  })
+  $.ajax('/tweets', {method: 'GET'})
+    .then((tweets) => {
+      renderTweets(tweets);
+  });
 };
-
 
 
 //Add an event listener for submit and prevent its default behaviour
@@ -83,9 +82,13 @@ $("#tweetform").on("submit", function(event) {
   } else {
     $("#errorinput").slideUp();
     $("#errorlength").slideUp();
-    $.post("/tweets/", input);
+    $.post("/tweets/", input, () => {
     loadTweets();
+    });
   }
 });
+
+//load default tweets 
+loadTweets();
 
 });
