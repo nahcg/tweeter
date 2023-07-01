@@ -50,6 +50,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="newtweet">
+        <p id="errorinput" class="error">Please input a tweet!</section>
+        <p id="errorlength" class="error">Tweet needs to be less than 140 characters</section>
         <form class="tweetform" method="POST" action="/tweets" id="tweetform">
           <label for="tweet-text" class="tweettext">What are you humming about?</label>
           <br>
