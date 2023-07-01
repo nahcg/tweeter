@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuerym AJAX, Node and Express. 
+Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery, AJAX, Node and Express. 
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ Tweeter is a simple, single-page Twitter clone built using HTML, CSS, JS, jQuery
 * chance
 
 ![Submit new tweet](https://github.com/nahcg/tweeter/blob/master/img/Newtweet.png)
-![Error message if input is empty](https://github.com/nahcg/tweeter/blob/master/img/Nopinput.png)
+![Error message if input is empty](https://github.com/nahcg/tweeter/blob/master/img/Noinput.png)
 ![Error message if input too long](https://github.com/nahcg/tweeter/blob/master/img/Longtweet.png)
-![Desktop layout](https://github.com/nahcg/tweeter/blob/master/img/Tweetdesktop.png)
-![Mobile layout](https://github.com/nahcg/tweeter/blob/master/img/Tweetmobile.png)
+![Desktop layout](https://github.com/nahcg/tweeter/blob/master/img/Tweeterdesktop.png)
+![Mobile layout](https://github.com/nahcg/tweeter/blob/master/img/Tweetermobile.png)
