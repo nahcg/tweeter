@@ -7,6 +7,11 @@ $( document ).ready(function() {
   
 const data = [];
 
+//error messages are not initially visible
+$("#errorinput").hide();
+$("#errorlength").hide();
+
+
 //Preventing XSS with escape function
 const escape = function (str) {
   let div = document.createElement("div");
@@ -66,11 +71,18 @@ function loadTweets() {
 $("#tweetform").on("submit", function(event) {
   event.preventDefault();
   const input = $('textarea').serialize();
+
   if (!$('textarea').val()) {
-    alert('no input');
+    //alert('no input');
+    $("#errorlength").slideUp();
+    $("#errorinput").slideDown();
   } else if (input.length > 140) {
-    alert('length too long')
+    //alert('length too long')
+    $("#errorinput").slideUp();
+    $("#errorlength").slideDown();
   } else {
+    $("#errorinput").slideUp();
+    $("#errorlength").slideUp();
     $.post("/tweets/", input);
     loadTweets();
   }
